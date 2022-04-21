@@ -16,6 +16,16 @@
 - Nuget -> Microsoft.EntityFrameworkCore.Tools -> Install
 - Nuget -> Microsoft.VisualStudio.Web.CodeGeneration.Design -> Install
 
-- Add -> Class -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 000 - Create Project
-- Add -> Class -> Nutz.Models -> Category.cs & ErrorViewModel.cs -> // 000 - Create Project
+- Edit -> Class -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 000 - Create Project
+- Edit -> Class -> Nutz.Models -> Category.cs & ErrorViewModel.cs -> // 000 - Create Project
 - Add -> Class -> Nutz.Utility -> SD.cs -> // 000 - Create Project
+
+- Edit -> Nutz.Web -> Pages -> _ViewImports.cshtml -> @*000 - Create Project*@
+
+- Edit -> Nutz.Web -> Program.cs -> // 000 - Create Project
+- Edit -> Nutz.Web -> appsettings.json -> // 000 - Create Project
+- Console -> Add-Migration AddCategoryToDb -> Update-Database
+
+- Edit -> Nutz.Web -> Views -> Category -> c + d + e + i -> // 000 - Create Project
+- Edit -> Nutz.Web -> Controllers -> CategoryController.cs -> // 000 - Create Project
+- Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> // 000 - Create Project 
