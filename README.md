@@ -29,3 +29,5 @@
 - Edit -> Nutz.Web -> Views -> Category -> c + d + e + i -> // 000 - Create Project
 - Edit -> Nutz.Web -> Controllers -> CategoryController.cs -> // 000 - Create Project
 - Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml & _Notification.cshtml -> @*000 - Create Project*@  
+
+> 001 - Repository Pattern
