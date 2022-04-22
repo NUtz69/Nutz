@@ -1,0 +1,38 @@
+﻿@model Category
+
+@*000 - Create Project*@
+
+<form method="post" asp-action="Delete">
+    @*Delete*@
+    <input asp-for="Id" hidden />
+
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete Category</h2>
+            <hr />
+        </div>
+
+        @*Name*@
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" disabled class="form-control" />
+        </div>
+        @*DisplayOrder*@
+        <div class="mb-3">
+            <label asp-for="DisplayOrder"></label>
+            <input asp-for="DisplayOrder" disabled class="form-control" />
+        </div>
+
+        @*button - Update*@
+        <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+
+        @*a - Back to list*@
+        <a asp-controller="Category" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to list</a>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
