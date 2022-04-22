@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Nutz.Web.Models;
+using Nutz.Models;
 using System.Diagnostics;
 
 namespace Nutz.Web.Controllers
