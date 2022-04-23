@@ -30,6 +30,8 @@
 - Edit -> Nutz.Web -> Controllers -> CategoryController.cs -> // 000 - Create Project
 - Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml & _Notification.cshtml -> @*000 - Create Project*@  
 
+@ Nutz.DataAccess
+
 > 001 - Repository Pattern
 
 - Add -> Interface -> Nutz.DataAccess -> Respository -> IRespository -> IRespository.cs -> // 001 - Repository Pattern
