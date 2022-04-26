@@ -38,7 +38,14 @@
 - Add -> Class -> Nutz.DataAccess -> Respository -> Respository.cs -> // 001 - Repository Pattern
 - Add -> Interface -> Nutz.DataAccess -> Respository -> IRespository -> ICategoryRespository.cs -> // 001 - Repository Pattern
 - Add -> Class -> Nutz.DataAccess -> Respository -> CategoryRespository.cs -> // 001 - Repository Pattern
+
 - Edit -> Nutz.Web -> Program.cs -> // 001 - Repository Pattern
 - Edit -> Nutz.Web -> Controllers -> CategoryRespository.cs -> // 001 - Repository Pattern
+
 - Add -> Interface -> Nutz.DataAccess -> Respository -> IRespository -> IUnitOfWork.cs -> // 001 - Repository Pattern
 - Add -> Class -> Nutz.DataAccess -> Respository -> UnitOfWork.cs -> // 001 - Repository Pattern
+
+- Add -> Class -> Nutz.Models -> CoverType.cs -> // 001 - Repository Pattern
+- Edit -> Class -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 001 - Repository Pattern
+- Console -> Add-Migration AddCoverTypeToDb -> Update-Database
+
