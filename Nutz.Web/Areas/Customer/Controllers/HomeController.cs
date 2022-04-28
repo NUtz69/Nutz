@@ -4,6 +4,8 @@ using System.Diagnostics;
 
 namespace Nutz.Web.Controllers
 {
+    // 001 - Repository Pattern
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
