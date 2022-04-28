@@ -26,7 +26,7 @@
 - Edit -> Nutz.Web -> appsettings.json -> // 000 - Create Project
 - Console -> Add-Migration AddCategoryToDb -> Update-Database
 
-- Edit -> Nutz.Web -> Views -> Category -> c + d + e + i -> // 000 - Create Project
+- Edit -> Nutz.Web -> Views -> Category -> c + d + e + i -> @*000 - Create Project*@
 - Edit -> Nutz.Web -> Controllers -> CategoryController.cs -> // 000 - Create Project
 - Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml & _Notification.cshtml -> @*000 - Create Project*@  
 
@@ -61,3 +61,11 @@
 - Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*001 - Repository Pattern*@ 
 - Edit -> Nutz.Web -> Controllers -> CategoryRespository.cs -> // 001 - Repository Pattern
 - Edit -> Nutz.Web -> Controllers -> HomeController.cs -> // 001 - Repository Pattern
+
+- Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> CoverTypeController.cs -> // 001 - Repository Pattern
+- Edit -> Nutz.Web -> Areas -> Admin -> Views -> CoverType -> c + d + e + i -> @*001 - Repository Pattern*@
+- Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*001 - Repository Pattern*@
+
+@ Nutz.Models
+
+> 002 - Product Management
