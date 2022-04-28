@@ -53,3 +53,11 @@
 - Add -> Class -> Nutz.DataAccess -> Respository -> CoverTypeRespository.cs -> // 001 - Repository Pattern
 - Edit -> Interface -> Nutz.DataAccess -> Respository -> IRespository -> IUnitOfWork.cs -> // 001 - Repository Pattern
 - Edit -> Class -> Nutz.DataAccess -> Respository -> UnitOfWork.cs -> // 001 - Repository Pattern
+
+- Add -> Nutz.Web -> New Scaffolded Item -> MVC Area -> Admin
+- Add -> Nutz.Web -> New Scaffolded Item -> MVC Area -> Customer
+- Edit -> Nutz.Web -> Program.cs -> // 001 - Repository Pattern
+- Copy -> Controllers + Views + _ViewImports.cshtml + _ViewStart.cshtm -> Nutz.Web -> Area -> Admin + Customer
+- Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*001 - Repository Pattern*@ 
+- Edit -> Nutz.Web -> Controllers -> CategoryRespository.cs -> // 001 - Repository Pattern
+- Edit -> Nutz.Web -> Controllers -> HomeController.cs -> // 001 - Repository Pattern
