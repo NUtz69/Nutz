@@ -3,7 +3,7 @@ using Nutz.Models;
 
 namespace Nutz.DataAccess
 {
-    // 000 - Create Project
+    // 001 - Repository Pattern
     public class ApplicationDbContext : DbContext
     {
         // ctor
@@ -13,6 +13,10 @@ namespace Nutz.DataAccess
         }
 
         // DbSet
+
+        // Category
         public DbSet<Category> Categories { get; set; }
+        // CoverType
+        public DbSet<CoverType> CoverTypes { get; set; }
     }
 }
