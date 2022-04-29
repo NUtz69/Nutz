@@ -69,3 +69,5 @@
 @ Nutz.Models
 
 > 002 - Product Management
+
+- Edit -> Class -> Nutz.Models -> Product.cs -> // 002 - Product Management
