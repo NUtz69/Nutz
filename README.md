@@ -71,3 +71,11 @@
 > 002 - Product Management
 
 - Edit -> Class -> Nutz.Models -> Product.cs -> // 002 - Product Management
+- Edit -> Class -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 002 - Product Management
+- Console -> Nutz.DataAccess -> Add-Migration AddProductToDb -> Update-Database
+
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IProductRespository.cs -> // 002 - Product Management
+- Edit -> Nutz.DataAccess -> Respository -> ProductRespository.cs -> // 002 - Product Management
+
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IUnitOfWork.cs -> // 002 - Product Management
+- Edit -> Nutz.DataAccess -> Respository -> UnitOfWork.cs -> // 002 - Product Management
