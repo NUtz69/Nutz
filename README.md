@@ -76,6 +76,9 @@
 
 - Edit -> Nutz.DataAccess -> Respository -> IRespository -> IProductRespository.cs -> // 002 - Product Management
 - Edit -> Nutz.DataAccess -> Respository -> ProductRespository.cs -> // 002 - Product Management
-
 - Edit -> Nutz.DataAccess -> Respository -> IRespository -> IUnitOfWork.cs -> // 002 - Product Management
 - Edit -> Nutz.DataAccess -> Respository -> UnitOfWork.cs -> // 002 - Product Management
+
+- Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> ProductController.cs -> // 002 - Product Management
+- Add -> View -> ProductController.cs -> Index -> Razor View - Empty -> Index.cshtml -> @*002 - Product Management*@
+- Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*002 - Product Management*@ 
