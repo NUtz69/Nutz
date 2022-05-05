@@ -86,3 +86,10 @@
 
 - Add -> New Folder -> Nutz.Models -> View Models
 - Add -> Class -> Nutz.Models -> ProductVM.cs -> // 002 - Product Management
+
+- Edit -> Nutz.Web -> Areas -> Admin -> Product -> Index.cshtml -> // 002 - Product Management
+- Add -> Nutz.Web -> wwwroot -> js -> New Item -> JavaScript -> product.js -> // 002 - Product Management
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IRespository.cs -> // 002 - Product Management
+- Edit -> Nutz.DataAccess -> Respository -> Respository.cs -> // 002 - Product Management
+- Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> ProductController.cs -> // 002 - Product Management
+
