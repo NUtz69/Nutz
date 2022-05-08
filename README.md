@@ -94,3 +94,8 @@
 - Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> ProductController.cs -> // 002 - Product Management
 - Edit -> Nutz.Web -> Areas -> Admin -> Views -> Product -> Upsert.cs -> // 002 - Product Management
 - Edit -> Nutz.Web -> Views -> Shared -> _Notification.cshtml -> @*002 - Product Management*@
+
+@ Home Page
+
+> 003 - Home Page
+
