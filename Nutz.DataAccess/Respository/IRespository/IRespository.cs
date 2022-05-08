@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace Nutz.DataAccess.Respository.IRespository
 {
-    // 001 - Repository Pattern
+    // 002 - Product Management
     public interface IRespository<T> where T : class
     {
         // T - Category
 
         // GetFirstOrDefault
-        T GetFirstOrDefault(Expression<Func<T, bool>> filter);
+        T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null);
         // GetAll
-        IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll(string? includeProperties = null);
         // Add
         void Add(T entity);
         // Remove

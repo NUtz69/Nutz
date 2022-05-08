@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Nutz.DataAccess.Respository
 {
-    // 001 - Repository Pattern
+    // 002 - Product Management
     public class Respository<T> : IRespository<T> where T : class
     {
         // Var
@@ -20,6 +20,7 @@ namespace Nutz.DataAccess.Respository
         public Respository(ApplicationDbContext db)
         {
             _db = db;
+            //_db.Products.Include(u => u.Category).Include(u => u.CoverType);
             this.dbSet = _db.Set<T>();
         }
 
@@ -29,19 +30,36 @@ namespace Nutz.DataAccess.Respository
             dbSet.Add(entity);
         }
 
+        // includeProperties - "Category, CoverType"
         // GetAll
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll(string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
+
+            if (includeProperties != null)
+            {
+                foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
+            }
 
             return query.ToList();
         }
 
         // GetFirstOrDefault
-        public T GetFirstOrDefault(Expression<Func<T, bool>> filter)
+        public T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             query = query.Where(filter);
+
+            if (includeProperties != null)
+            {
+                foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
+            }
 
             return query.FirstOrDefault();
         }
