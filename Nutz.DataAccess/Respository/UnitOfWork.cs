@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Nutz.DataAccess.Respository
 {
-    // 001 - Repository Pattern
+    // 002 - Product Management
     public class UnitOfWork : IUnitOfWork
     {
         // Var
@@ -19,11 +19,13 @@ namespace Nutz.DataAccess.Respository
             _db = db;
             Category = new CategoryRespository(_db);
             CoverType = new CoverTypeRespository(_db);
+            Product = new ProductRespository(_db);
         }
 
         // Get
         public ICategoryRespository Category { get; private set; } // Category
         public ICoverTypeRespository CoverType { get; private set; } // CoverType
+        public IProductRespository  Product { get; private set; } // Product
 
         // Save
         public void Save()

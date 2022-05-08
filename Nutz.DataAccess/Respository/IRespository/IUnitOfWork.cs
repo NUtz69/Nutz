@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Nutz.DataAccess.Respository.IRespository
 {
-    // 001 - Repository Pattern
+    // 002 - Product Management
     public interface IUnitOfWork
     {
         // Get
         ICategoryRespository Category { get; } // Category
         ICoverTypeRespository CoverType { get; } // CoverType
+        IProductRespository Product { get; } // Product
 
         // Save
         void Save();
