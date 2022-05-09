@@ -99,3 +99,5 @@
 
 > 003 - Home Page
 
+- Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> HomeController.cs -> // 003 - Home Page
+- Edit -> Nutz.Web -> Areas -> Customer -> Views -> Home -> Index.cshtml -> @*003 - Home Page*@
