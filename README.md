@@ -103,3 +103,7 @@
 - Edit -> Nutz.Web -> Areas -> Customer -> Views -> Home -> Index.cshtml -> @*003 - Home Page*@
 - Add -> Class -> Nutz.Models -> ShoppingCart.cs -> // 003 - Home Page
 - Add -> View -> HomeController.cs -> Details -> Razor View -> Details.cshtml -> @*003 - Home Page*@
+
+@ Identity Management
+
+> 004 - Identity Management
