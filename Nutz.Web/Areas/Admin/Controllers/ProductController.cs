@@ -4,7 +4,7 @@ using Nutz.DataAccess;
 using Nutz.DataAccess.Respository;
 using Nutz.DataAccess.Respository.IRespository;
 using Nutz.Models;
-using Nutz.Models.View_Models;
+using Nutz.Models.ViewModels;
 
 namespace Nutz.Web.Controllers
 {
@@ -17,10 +17,10 @@ namespace Nutz.Web.Controllers
         private readonly IWebHostEnvironment _hostEnvironment;
 
         // ctor
-        public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironmen)
+        public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
         {
             _unitOfWork = unitOfWork;
-            _hostEnvironment = hostEnvironmen;
+            _hostEnvironment = hostEnvironment;
         }
 
         // Index

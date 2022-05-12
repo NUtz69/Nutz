@@ -1,5 +1,5 @@
 ﻿@*002 - Product Management*@
-@model Nutz.Models.View_Models.ProductVM
+@model Nutz.Models.ViewModels.ProductVM
 
 <form method="post" asp-action="Upsert" enctype="multipart/form-data">
     @*ProductId+ImageUrl*@
@@ -110,7 +110,7 @@
 
         <div class="col-2 pt-4">
             @*Image*@
-            <img src="@Model.Product.ImageUrl" width="100%" style="border-radius:5px; border:1px solid #bbb9b9" />
+            <img src="@Model.Product.ImageUrl" width="100" style="border-radius:5px; border:1px solid #bbb9b9" />
         </div>
     </div>
 </form>
