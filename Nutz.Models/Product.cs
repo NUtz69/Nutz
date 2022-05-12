@@ -14,12 +14,12 @@ namespace Nutz.Models
     {
         public int Id { get; set; } // Id
         [Required]
-        public string Title { get; set; } // Title
-        public string Description { get; set; } // Description
+        public string? Title { get; set; } // Title
+        public string? Description { get; set; } // Description
         [Required]
-        public string ISBN { get; set; } // ISBN
+        public string? ISBN { get; set; } // ISBN
         [Required]
-        public string Author { get; set; } // Author
+        public string? Author { get; set; } // Author
         [Required]
         [Display(Name = " List Price")]
         [Range(1, 10000)]
@@ -40,7 +40,7 @@ namespace Nutz.Models
 
         [ValidateNever]
         [Display(Name = "Image")]
-        public string ImageUrl { get; set; } // ImageUrl
+        public string? ImageUrl { get; set; } // ImageUrl
 
         // ForeignKey
         [Required]
@@ -48,12 +48,12 @@ namespace Nutz.Models
         public int CategoryId { get; set; } // CategoryId
         [ForeignKey("CategoryId")]
         [ValidateNever]
-        public Category Category { get; set; } // Category
+        public Category? Category { get; set; } // Category
 
         [Required]
         [Display(Name = "Cover Type")]
         public int CoverTypeId { get; set; } // CoverTypeId
         [ValidateNever]
-        public CoverType CoverType { get; set; } // CoverType
+        public CoverType? CoverType { get; set; } // CoverType
     }
 }
