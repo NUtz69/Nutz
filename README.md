@@ -112,3 +112,8 @@
 - Edit -> Class -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 004 - Identity Management
 - Add -> Nutz.Web -> New Scaffolded Item -> Identity -> Override all files + ApplicationDbContext 
 - Edit -> Nutz.Web -> Program.cs -> // 004 - Identity Management
+
+- Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*004 - Identity Management*@
+- Edit -> Nutz.Web -> Views -> Shared -> _LoginPartial.cshtml -> @*004 - Identity Management*@
+- Edit -> Nutz.Web -> Program.cs -> // 004 - Identity Management
+- Console -> Nutz.DataAccess -> Add-Migration AddIdentityToDb -> Update-Database
