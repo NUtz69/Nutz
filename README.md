@@ -121,3 +121,9 @@
 - Edit -> Class -> Nutz.Models -> ApplicationUser.cs -> // 004 - Identity Management
 - Edit -> Class -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 004 - Identity Management
 - Console -> Nutz.DataAccess -> Add-Migration ExtendIdentityUser -> Update-Database
+
+- Edit -> Class -> Nutz.Models -> Company.cs -> // 004 - Identity Management
+- Edit -> Class -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 004 - Identity Management
+- Console -> Nutz.DataAccess -> Add-Migration AddCompanyToDb -> Update-Database
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IComparyRespository.cs -> // 004 - Identity Management
+- Edit -> Nutz.DataAccess -> Respository -> Respository -> ComparyRespository.cs -> // 004 - Identity Management
