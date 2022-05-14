@@ -117,3 +117,7 @@
 - Edit -> Nutz.Web -> Views -> Shared -> _LoginPartial.cshtml -> @*004 - Identity Management*@
 - Edit -> Nutz.Web -> Program.cs -> // 004 - Identity Management
 - Console -> Nutz.DataAccess -> Add-Migration AddIdentityToDb -> Update-Database
+
+- Edit -> Class -> Nutz.Models -> ApplicationUser.cs -> // 004 - Identity Management
+- Edit -> Class -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 004 - Identity Management
+- Console -> Nutz.DataAccess -> Add-Migration ExtendIdentityUser -> Update-Database
