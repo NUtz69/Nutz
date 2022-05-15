@@ -126,4 +126,10 @@
 - Edit -> Class -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 004 - Identity Management
 - Console -> Nutz.DataAccess -> Add-Migration AddCompanyToDb -> Update-Database
 - Edit -> Nutz.DataAccess -> Respository -> IRespository -> IComparyRespository.cs -> // 004 - Identity Management
-- Edit -> Nutz.DataAccess -> Respository -> Respository -> ComparyRespository.cs -> // 004 - Identity Management
+- Edit -> Nutz.DataAccess -> Respository -> CompanyRespository.cs -> // 004 - Identity Management
+- Edit -> Nutz.DataAccess -> Respository -> UnitOfWork.cs -> // 004 - Identity Management
+- Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> CompanyController.cs -> // 004 - Identity Management
+- Edit -> Nutz.Web -> wwwroot -> js -> company.js -> // 004 - Identity Management
+- Edit -> Nutz.Web -> Areas -> Admin -> Views -> Company -> Index.cshtml -> @*004 - Identity Management*@
+- Edit -> Nutz.Web -> Areas -> Admin -> Views -> Company -> Upsert.cshtml -> @*004 - Identity Management*@
+- Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*004 - Identity Management*@
