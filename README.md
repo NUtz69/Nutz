@@ -133,3 +133,5 @@
 - Edit -> Nutz.Web -> Areas -> Admin -> Views -> Company -> Index.cshtml -> @*004 - Identity Management*@
 - Edit -> Nutz.Web -> Areas -> Admin -> Views -> Company -> Upsert.cshtml -> @*004 - Identity Management*@
 - Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*004 - Identity Management*@
+
+- Edit -> Nutz.Web -> Program.cs -> // 004 - Identity Management
