@@ -135,3 +135,7 @@
 - Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*004 - Identity Management*@
 
 - Edit -> Nutz.Web -> Program.cs -> // 004 - Identity Management
+- Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Register.cshtml.cs -> // 004 - Identity Management
+- Edit -> Nutz.Utility -> SD.cs -> // 004 - Identity Management
+- Edit -> Nutz.Utility -> EmailSender.cs -> // 004 - Identity Management
+- Edit -> Nutz.Web -> Program.cs -> // 004 - Identity Management
