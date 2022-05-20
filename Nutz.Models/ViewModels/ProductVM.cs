@@ -12,10 +12,10 @@ namespace Nutz.Models.ViewModels
     public class ProductVM
     {
         // Get
-        public Product Product { get; set; } // product
+        public Product? Product { get; set; } // product
         [ValidateNever]
-        public IEnumerable<SelectListItem> CategoryList { get; set; } // CategoryList
+        public IEnumerable<SelectListItem>? CategoryList { get; set; } // CategoryList
         [ValidateNever]
-        public IEnumerable<SelectListItem> CoverTypeList { get; set; } // CoverTypeList
+        public IEnumerable<SelectListItem>? CoverTypeList { get; set; } // CoverTypeList
     }
 }

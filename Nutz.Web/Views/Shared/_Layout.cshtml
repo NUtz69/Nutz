@@ -35,16 +35,19 @@
                     @*dropdown*@
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Managment</a>
                     <div class="dropdown-menu">
-                        @*Category*@
-                        <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
-                        @*CoverType*@
-                        <a class="dropdown-item" asp-area="Admin" asp-controller="CoverType" asp-action="Index">Cover Type</a>
-                        @*002 - Product Management*@ 
-                        @*Product*@
-                        <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+                        <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a> @*Category*@                        
+                        <a class="dropdown-item" asp-area="Admin" asp-controller="CoverType" asp-action="Index">Cover Type</a> @*CoverType*@
+                        @*002 - Product Management*@                        
+                        <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a> @*Product*@
+                        @*004 - Identity Management*@
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a> @*Company*@
                     </div>
                 </li>
               </ul>
+
+              @*004 - Identity Management*@
+              <partial name="_LoginPartial" />
 
               @*Search*@
               @*<form class="d-flex">

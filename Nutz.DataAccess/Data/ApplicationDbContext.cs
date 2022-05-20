@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Nutz.Models;
 
 namespace Nutz.DataAccess
 {
-    // 002 - Product Management
-    public class ApplicationDbContext : DbContext
+    // 004 - Identity Management
+    public class ApplicationDbContext : IdentityDbContext
     {
         // ctor
         #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
@@ -14,16 +15,12 @@ namespace Nutz.DataAccess
 
         }
 
-        // DbSet
-
-        // Category
-        public DbSet<Category> Categories { get; set; }
-        // CoverType
-        public DbSet<CoverType> CoverTypes { get; set; }
-        // Product
-        public DbSet<Product> Products { get; set; }
-        // ShoppingCart
-        //public DbSet<ShoppingCart> ShoppingCart { get; set; }
+        // DbSet        
+        public DbSet<Category> Categories { get; set; } // Category
+        public DbSet<CoverType> CoverTypes { get; set; } // CoverType
+        public DbSet<Product> Products { get; set; } // Product        
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; } // ApplicationUser
+        public DbSet<Company> Companies { get; set; } // Company
 
     }
 }
