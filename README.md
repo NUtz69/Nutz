@@ -142,3 +142,8 @@
 
 - Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Register.cshtml.cs -> // 004 - Identity Management
 - Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Register.cshtml -> @*004 - Identity Management*@
+ 
+- Edit -> Class -> Nutz.Models -> ApplicationUser.cs -> // 004 - Identity Management
+- Console -> Nutz.DataAccess -> Add-Migration AddCompanyIdToUser -> Update-Database
+- Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Register.cshtml.cs -> // 004 - Identity Management
+- Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Register.cshtml -> @*004 - Identity Management*@
