@@ -2,8 +2,15 @@ using Microsoft.EntityFrameworkCore;
 using Nutz.DataAccess;
 using Nutz.DataAccess.Respository;
 using Nutz.DataAccess.Respository.IRespository;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Nutz.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// 004 - Identity Management
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(/*options => options.SignIn.RequireConfirmedAccount = true*/).AddDefaultTokenProviders()
+    .AddEntityFrameworkStores<ApplicationDbContext>();;
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -15,6 +22,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 
 // 001 - Repository Pattern
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+// 004 - Identity Management
+builder.Services.AddSingleton<IEmailSender, EmailSender>();
+
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 var app = builder.Build();
@@ -31,8 +41,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();;
 
 app.UseAuthorization();
+
+// 004 - Identity Management
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",

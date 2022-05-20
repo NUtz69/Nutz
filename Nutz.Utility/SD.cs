@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Nutz.Utility
 {
-    // 000 - Create Project
+    // 004 - Identity Management
     public static class SD
     {
+        public const string Role_User_Indi = "Individual";
+        public const string Role_User_Comp = "Company";
+        public const string Role_Admin = "Admin";
+        public const string Role_Employee = "Employee";
     }
 }

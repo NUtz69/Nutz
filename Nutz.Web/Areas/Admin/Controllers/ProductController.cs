@@ -14,7 +14,7 @@ namespace Nutz.Web.Controllers
     {
         // Var
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IWebHostEnvironment _hostEnvironment;
+        private readonly IWebHostEnvironment _hostEnvironment; // File
 
         // ctor
         public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
@@ -112,7 +112,7 @@ namespace Nutz.Web.Controllers
                     _unitOfWork.Product.Update(obj.Product);
                 }
                 _unitOfWork.Save();
-                TempData["success"] = "Product created successfully";
+                TempData["success"] = "Product created successfully !";
 
                 return RedirectToAction("Index");
             }
