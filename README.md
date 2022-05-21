@@ -154,3 +154,13 @@
 
 > 005 - Shopping Cart
 
+- Edit -> Nutz.Models -> ShoppingCart.cs -> // 005 - Shopping Cart
+- Edit -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 005 - Shopping Cart
+- Console -> Nutz.DataAccess -> Add-Migration AddShoppingCartToDb -> Update-Database
+
+- Edit -> Nutz.DataAccess -> Respository -> ShoppingCartRespository.cs -> // 005 - Shopping Cart
+- Edit -> Nutz.DataAccess -> Respository -> ApplicationUserRespository.cs -> // 005 - Shopping Cart
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IShoppingCartRespository.cs -> // 005 - Shopping Cart
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IApplicationUserRespository.cs -> // 005 - Shopping Cart
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IUnitOfWork.cs -> // 005 - Shopping Cart
+- Edit -> Nutz.DataAccess -> Respository -> UnitOfWork.cs -> // 005 - Shopping Cart
