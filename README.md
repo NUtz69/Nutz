@@ -168,3 +168,7 @@
 - Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> HomeController.cs -> // 005 - Shopping Cart
 - Edit -> Nutz.Web -> Areas -> Customer -> Views -> Home -> Details.cshtml -> @*005 - Shopping Cart*@
 - Edit -> Nutz.Web -> Areas -> Customer -> Views -> Home -> Index.cshtml -> @*005 - Shopping Cart*@
+
+- Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> HomeController.cs -> // 005 - Shopping Cart
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IShoppingCartRespository.cs -> // 005 - Shopping Cart
+- Edit -> Nutz.DataAccess -> Respository -> ShoppingCartRespository.cs -> // 005 - Shopping Cart
