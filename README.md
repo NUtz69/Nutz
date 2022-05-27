@@ -184,3 +184,4 @@
 - Edit -> Nutz.DataAccess -> Respository -> Respository.cs -> // 005 - Shopping Cart
 - Edit -> Nutz.DataAccess -> Respository -> IRespository -> IRespository.cs -> // 005 - Shopping Cart
 - Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 005 - Shopping Cart
+- Edit -> Nutz.Models -> ShoppingCart.cs -> // 005 - Shopping Cart
