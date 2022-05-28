@@ -15,6 +15,9 @@ namespace Nutz.DataAccess.Respository.IRespository
         IProductRespository Product { get; } // Product
         // 004 - Identity Management
         ICompanyRespository Company { get; } // Company
+        // 005 - Shopping Cart
+        IShoppingCartRespository ShoppingCart { get; } // ShoppingCart
+        IApplicationUserRespository ApplicationUser { get; } // ApplicationUser
 
         // Save
         void Save();
