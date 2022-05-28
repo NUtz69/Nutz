@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Nutz.Models
 {
-    // 003 - Home Page
+    // 005 - Shopping Cart
     public class ShoppingCart
     {
         // Id
@@ -24,5 +24,15 @@ namespace Nutz.Models
         // Count
         [Range(1, 1000, ErrorMessage = "Please enter a value between 1 and 1000 !")]
         public int Count { get; set; }
+
+        // ApplicationUserId
+        public string ApplicationUserId { get; set; }
+        [ForeignKey("ApplicationUserId")]
+        [ValidateNever]
+        public ApplicationUser ApplicationUser { get; set; }
+
+        // Price
+        [NotMapped]
+        public double Price { get; set; }
     }
 }

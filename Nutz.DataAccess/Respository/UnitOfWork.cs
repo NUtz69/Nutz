@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Nutz.DataAccess.Respository
 {
-    // 004 - Identity Management
+    // 005 - Shopping Cart
     public class UnitOfWork : IUnitOfWork
     {
         // Var
@@ -21,6 +21,8 @@ namespace Nutz.DataAccess.Respository
             CoverType = new CoverTypeRespository(_db);
             Product = new ProductRespository(_db);
             Company = new CompanyRespository(_db);
+            ApplicationUser = new ApplicationUserRespository(_db);
+            ShoppingCart = new ShoppingCartRespository(_db);
         }
 
         // Get
@@ -28,6 +30,8 @@ namespace Nutz.DataAccess.Respository
         public ICoverTypeRespository CoverType { get; private set; } // CoverType
         public IProductRespository  Product { get; private set; } // Product
         public ICompanyRespository Company { get; private set; } // Company
+        public IShoppingCartRespository ShoppingCart { get; private set; } // ShoppingCart
+        public IApplicationUserRespository ApplicationUser { get; private set; } // ApplicationUser
 
         // Save
         public void Save()

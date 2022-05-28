@@ -15,7 +15,7 @@ namespace Nutz.DataAccess.Respository.IRespository
         // GetFirstOrDefault
         T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null);
         // GetAll
-        IEnumerable<T> GetAll(string? includeProperties = null);
+        IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null); // 005 - Shopping Cart
         // Add
         void Add(T entity);
         // Remove

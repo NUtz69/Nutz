@@ -4,7 +4,7 @@ using Nutz.Models;
 
 namespace Nutz.DataAccess
 {
-    // 004 - Identity Management
+    // 005 - Shopping Cart
     public class ApplicationDbContext : IdentityDbContext
     {
         // ctor
@@ -21,6 +21,7 @@ namespace Nutz.DataAccess
         public DbSet<Product> Products { get; set; } // Product        
         public DbSet<ApplicationUser> ApplicationUsers { get; set; } // ApplicationUser
         public DbSet<Company> Companies { get; set; } // Company
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; } // ShoppingCart
 
     }
 }
