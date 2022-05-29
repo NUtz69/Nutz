@@ -201,4 +201,11 @@
 - Edit -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 006 - Order
 - Console -> Nutz.DataAccess -> Add-Migration AddOrderHeaderAndOrderDetailToDb -> Update-Database
 
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IOrderHeaderRespository.cs -> // 006 - Order
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IOrderDetailRespository.cs -> // 006 - Order
+- Edit -> Nutz.DataAccess -> Respository -> OrderHeaderRespository.cs -> // 006 - Order
+- Edit -> Nutz.DataAccess -> Respository -> OrderDetailRespository.cs -> // 006 - Order
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IUnitOfWork.cs -> // 006 - Order
+- Edit -> Nutz.DataAccess -> Respository -> UnitOfWork.cs -> // 006 - Order
+
 - Edit -> Nutz.Web -> Areas -> Customer -> Views -> Cart -> Summary.cshtml -> @*006 - Order*@
