@@ -179,14 +179,14 @@
 - Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 005 - Shopping Cart
 - Edit -> Nutz.Web -> Areas -> Customer -> Views -> Cart -> Index.cshtml -> @*005 - Shopping Cart*@
 
-- Edit-> Nutz.Models -> ShoppingCartVM.cs -> // 005 - Shopping Cart
+- Edit-> Nutz.Models -> ViewModels -> ShoppingCartVM.cs -> // 005 - Shopping Cart
 - Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 005 - Shopping Cart
 - Edit -> Nutz.DataAccess -> Respository -> Respository.cs -> // 005 - Shopping Cart
 - Edit -> Nutz.DataAccess -> Respository -> IRespository -> IRespository.cs -> // 005 - Shopping Cart
 - Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 005 - Shopping Cart
 - Edit -> Nutz.Models -> ShoppingCart.cs -> // 005 - Shopping Cart
 
-- Edit-> Nutz.Models -> ShoppingCartVM.cs -> // 005 - Shopping Cart
+- Edit-> Nutz.Models -> ViewModels -> ShoppingCartVM.cs -> // 005 - Shopping Cart
 - Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 005 - Shopping Cart
 - Edit -> Nutz.Web -> Areas -> Customer -> Views -> Cart -> Index.cshtml -> @*005 - Shopping Cart*@
 
@@ -195,3 +195,10 @@
 @ Order Creation
 
 > 006 - Order
+
+- Edit-> Nutz.Models -> OrderHeader.cs -> // 006 - Order
+- Edit-> Nutz.Models -> OrderDetail.cs -> // 006 - Order
+- Edit -> Nutz.DataAccess -> Data -> ApplicationDbContext.cs -> // 006 - Order
+- Console -> Nutz.DataAccess -> Add-Migration AddOrderHeaderAndOrderDetailToDb -> Update-Database
+
+- Edit -> Nutz.Web -> Areas -> Customer -> Views -> Cart -> Summary.cshtml -> @*006 - Order*@
