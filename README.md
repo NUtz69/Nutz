@@ -208,4 +208,8 @@
 - Edit -> Nutz.DataAccess -> Respository -> IRespository -> IUnitOfWork.cs -> // 006 - Order
 - Edit -> Nutz.DataAccess -> Respository -> UnitOfWork.cs -> // 006 - Order
 
+- Edit-> Nutz.Models -> ViewModels -> ShoppingCartVM.cs -> // 006 - Order
+- Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 006 - Order
+- Edit -> Nutz.Web -> Areas -> Customer -> Views -> Cart -> Index.cshtml -> @*006 - Order*@
+
 - Edit -> Nutz.Web -> Areas -> Customer -> Views -> Cart -> Summary.cshtml -> @*006 - Order*@
