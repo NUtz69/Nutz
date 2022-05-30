@@ -213,3 +213,6 @@
 - Edit -> Nutz.Web -> Areas -> Customer -> Views -> Cart -> Index.cshtml -> @*006 - Order*@
 
 - Edit -> Nutz.Web -> Areas -> Customer -> Views -> Cart -> Summary.cshtml -> @*006 - Order*@
+
+- Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 006 - Order
+- Edit -> Nutz.Utility -> SD.cs -> // 006 - Order
