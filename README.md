@@ -217,4 +217,9 @@
 - Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 006 - Order
 - Edit -> Nutz.Utility -> SD.cs -> // 006 - Order
 
-@* Test
+> Stripe
+
+- Edit -> Nutz.Web -> appsettings.json -> // 006 - Order
+- Edit -> Nutz.Utility -> StripeSettings.cs -> // 006 - Order
+- Edit -> Nutz.Web -> Program.cs -> // 006 - Order
+- Edit -> Nutz.Web -> Areas -> Customer -> Views -> Cart -> Summary.cshtml -> @*006 - Order*@
