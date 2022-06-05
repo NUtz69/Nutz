@@ -224,3 +224,6 @@
 - Edit -> Nutz.Web -> Program.cs -> // 006 - Order
 - Edit -> Nutz.Web -> Areas -> Customer -> Views -> Cart -> Summary.cshtml -> @*006 - Order*@
 - Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 006 - Order
+- Edit -> Nutz.DataAccess -> Respository -> OrderHeaderRespository.cs -> // 006 - Order
+- Edit -> Nutz.DataAccess -> Respository -> IRespository -> IOrderHeaderRespository.cs -> // 006 - Order
+- Edit -> Nutz.Web -> Areas -> Customer -> Views -> Cart -> OrderConfirmation.cshtml -> @*006 - Order*@
