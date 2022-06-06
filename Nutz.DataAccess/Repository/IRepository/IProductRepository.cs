@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nutz.DataAccess.Respository.IRespository
+namespace Nutz.DataAccess.Repository.IRepository
 {
     // 002 - Product Management
-    public interface IProductRespository : IRespository<Product>
+    public interface IProductRepository : IRepository<Product>
     {
         // Update
         void Update(Product obj);

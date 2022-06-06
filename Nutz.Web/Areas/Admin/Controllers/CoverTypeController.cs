@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Nutz.DataAccess;
-using Nutz.DataAccess.Respository.IRespository;
+using Nutz.DataAccess.Repository.IRepository;
 using Nutz.Models;
 
 namespace Nutz.Web.Controllers

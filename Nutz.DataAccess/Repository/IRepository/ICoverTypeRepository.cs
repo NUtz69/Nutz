@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nutz.DataAccess.Respository.IRespository
+namespace Nutz.DataAccess.Repository.IRepository
 {
     // 001 - Repository Pattern
-    public interface ICategoryRespository : IRespository<Category>
+    public interface ICoverTypeRepository : IRepository<CoverType>
     {
         // Update
-        void Update(Category obj);
+        void Update(CoverType obj);
     }
 }

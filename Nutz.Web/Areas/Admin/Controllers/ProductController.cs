@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Nutz.DataAccess;
-using Nutz.DataAccess.Respository;
-using Nutz.DataAccess.Respository.IRespository;
+using Nutz.DataAccess.Repository;
+using Nutz.DataAccess.Repository.IRepository;
 using Nutz.Models;
 using Nutz.Models.ViewModels;
 

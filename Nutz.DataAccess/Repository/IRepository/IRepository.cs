@@ -5,10 +5,10 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nutz.DataAccess.Respository.IRespository
+namespace Nutz.DataAccess.Repository.IRepository
 {
     // 002 - Product Management
-    public interface IRespository<T> where T : class
+    public interface IRepository<T> where T : class
     {
         // T - Category
 

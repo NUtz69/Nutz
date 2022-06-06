@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Nutz.Models.ViewModels
 {
-    // 005 - Shopping Cart
+    // 006 - Order
     public class ShoppingCartVM
     {
-        public IEnumerable<ShoppingCart> ListCart { get; set; } // ListCart
-        public double CartTotal { get; set; } // CartTotal
+        public IEnumerable<ShoppingCart> ListCart { get; set; } // ListCart        
+        public OrderHeader OrderHeader { get; set; } // OrderHeader
     }
 }

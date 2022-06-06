@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nutz.DataAccess.Respository.IRespository
+namespace Nutz.DataAccess.Repository.IRepository
 {
     // 004 - Identity Management
-    public interface ICompanyRespository : IRespository<Company>
+    public interface ICompanyRepository : IRepository<Company>
     {
         // Update
         void Update(Company obj);
