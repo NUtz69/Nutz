@@ -20,7 +20,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-using Nutz.DataAccess.Respository.IRespository;
+using Nutz.DataAccess.Repository.IRepository;
 using Nutz.Models;
 using Nutz.Utility;
 

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Nutz.DataAccess.Respository.IRespository;
+using Nutz.DataAccess.Repository.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,17 +7,17 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nutz.DataAccess.Respository
+namespace Nutz.DataAccess.Repository
 {
     // 002 - Product Management
-    public class Respository<T> : IRespository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
         // Var
         private readonly ApplicationDbContext _db;
         internal DbSet<T> dbSet;
 
         // ctor
-        public Respository(ApplicationDbContext db)
+        public Repository(ApplicationDbContext db)
         {
             _db = db;
             //_db.ShoppingCarts.Include(u => u.Product).Include(u => u.CoverType);

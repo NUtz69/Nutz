@@ -1,16 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using Nutz.DataAccess;
-using Nutz.DataAccess.Respository;
-using Nutz.DataAccess.Respository.IRespository;
+using Nutz.DataAccess.Repository;
+using Nutz.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Nutz.Utility;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // 004 - Identity Management
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(/*options => options.SignIn.RequireConfirmedAccount = true*/).AddDefaultTokenProviders()
-    .AddEntityFrameworkStores<ApplicationDbContext>();;
+    .AddEntityFrameworkStores<ApplicationDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -19,6 +20,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));
+
+// 006 - Order
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
 // 001 - Repository Pattern
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -49,8 +53,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication();;
 
+// 006 - Order
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 // 004 - Identity Management

@@ -1,4 +1,4 @@
-﻿using Nutz.DataAccess.Respository.IRespository;
+﻿using Nutz.DataAccess.Repository.IRepository;
 using Nutz.Models;
 using System;
 using System.Collections.Generic;
@@ -6,16 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nutz.DataAccess.Respository
+namespace Nutz.DataAccess.Repository
 {
     // 002 - Product Management
-    public class ProductRespository : Respository<Product>, IProductRespository
+    public class ProductRepository : Repository<Product>, IProductRepository
     {
         // Var
         private readonly ApplicationDbContext _db;
 
         // ctor
-        public ProductRespository(ApplicationDbContext db) : base(db)
+        public ProductRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }

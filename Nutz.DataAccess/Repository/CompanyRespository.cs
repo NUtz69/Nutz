@@ -1,4 +1,4 @@
-﻿using Nutz.DataAccess.Respository.IRespository;
+﻿using Nutz.DataAccess.Repository.IRepository;
 using Nutz.Models;
 using System;
 using System.Collections.Generic;
@@ -6,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nutz.DataAccess.Respository
+namespace Nutz.DataAccess.Repository
 {
     // 001 - Repository Pattern
-    public class CompanyRespository : Respository<Company>, ICompanyRespository
+    public class CompanyRespository : Repository<Company>, ICompanyRepository
     {
         // Var
         private readonly ApplicationDbContext _db;

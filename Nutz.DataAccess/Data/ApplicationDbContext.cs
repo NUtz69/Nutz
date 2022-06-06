@@ -22,6 +22,8 @@ namespace Nutz.DataAccess
         public DbSet<ApplicationUser> ApplicationUsers { get; set; } // ApplicationUser
         public DbSet<Company> Companies { get; set; } // Company
         public DbSet<ShoppingCart> ShoppingCarts { get; set; } // ShoppingCart
-
+        // 006 - Order
+        public DbSet<OrderHeader> OrderHeaders { get; set; } // OrderHeader
+        public DbSet<OrderDetail> OrderDetails { get; set; } // OrderDetail
     }
 }

@@ -1,4 +1,4 @@
-﻿using Nutz.DataAccess.Respository.IRespository;
+﻿using Nutz.DataAccess.Repository.IRepository;
 using Nutz.Models;
 using System;
 using System.Collections.Generic;
@@ -6,24 +6,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nutz.DataAccess.Respository
+namespace Nutz.DataAccess.Repository
 {
     // 001 - Repository Pattern
-    public class CategoryRespository : Respository<Category>, ICategoryRespository
+    public class CoverTypeRepository : Repository<CoverType>, ICoverTypeRepository
     {
         // Var
         private readonly ApplicationDbContext _db;
 
         // ctor
-        public CategoryRespository(ApplicationDbContext db) : base(db)
+        public CoverTypeRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
 
         // Update
-        public void Update(Category obj)
+        public void Update(CoverType obj)
         {
-            _db.Categories.Update(obj);
+            _db.CoverTypes.Update(obj);
         }
     }
 }

@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nutz.DataAccess.Respository.IRespository
+namespace Nutz.DataAccess.Repository.IRepository
 {
     // 005 - Shopping Cart
-    public interface IApplicationUserRespository : IRespository<ApplicationUser>
+    public interface IApplicationUserRepository : IRepository<ApplicationUser>
     {
     }
 }
