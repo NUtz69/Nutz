@@ -242,3 +242,6 @@
 - Edit -> Nutz.Web -> wwwroot -> js -> order.js -> // 007 - Order Management
 - Edit -> Nutz.Web -> Areas -> Admin -> Views -> Order -> Index.cshtml -> @*007 - Order Management*@
 - Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*007 - Order Management*@
+
+- Edit -> Nutz.Web -> wwwroot -> js -> order.js -> // 007 - Order Management
+- Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> OrderController.cs -> // 007 - Order Management
