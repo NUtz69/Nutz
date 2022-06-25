@@ -254,3 +254,5 @@
 
 - Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> OrderController.cs -> // 007 - Order Management
 - Edit -> Nutz.Web -> Areas -> Admin -> Views -> Order -> Details.cshtml -> @*007 - Order Management*@
+
+- Edit -> Nutz.Web -> Areas -> Admin -> Views -> Order -> PaymentConfirmation.cshtml -> @*007 - Order Management*@
