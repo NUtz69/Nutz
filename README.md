@@ -260,3 +260,9 @@
 @ MVC Advance Concepts
 
 > 008 - Advance Concepts
+
+- Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> CategoryController.cs -> // 008 - Advance Concepts
+- Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> CompanyController.cs -> // 008 - Advance Concepts
+- Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> CoverTypeController.cs -> // 008 - Advance Concepts
+- Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> ProductController.cs -> // 008 - Advance Concepts
+- Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*008 - Advance Concepts*@
