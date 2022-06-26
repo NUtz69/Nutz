@@ -20,6 +20,7 @@ namespace Nutz.DataAccess.Repository
         public Repository(ApplicationDbContext db)
         {
             _db = db;
+            /*_db.ShoppingCarts.AsNoTracking();*/ // 007 - Order Management
             //_db.ShoppingCarts.Include(u => u.Product).Include(u => u.CoverType);
             this.dbSet = _db.Set<T>();
         }
@@ -53,9 +54,20 @@ namespace Nutz.DataAccess.Repository
         }
 
         // GetFirstOrDefault
-        public T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null)
+        public T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null, bool tracked = true) // 007 - Order Management
         {
-            IQueryable<T> query = dbSet;
+            IQueryable<T> query;
+
+            // 007 - Order Management
+            if (tracked)
+            {
+                query = dbSet;
+            }
+            else
+            {
+                query = dbSet.AsNoTracking();
+            }
+
             query = query.Where(filter);
 
             if (includeProperties != null)

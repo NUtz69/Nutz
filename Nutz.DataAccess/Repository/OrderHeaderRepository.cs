@@ -48,6 +48,7 @@ namespace Nutz.DataAccess.Repository
         {
             var orderFromDb = _db.OrderHeaders.FirstOrDefault(u => u.Id == id);
 
+            orderFromDb.PaymentDate = DateTime.Now; // 007 - Order Management
             orderFromDb.SessionId = sessionId;
             orderFromDb.PaymentIntentId = paymentIntentId;
         }
