@@ -13,7 +13,7 @@ namespace Nutz.DataAccess.Repository.IRepository
         // T - Category
 
         // GetFirstOrDefault
-        T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null);
+        T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null, bool tracked = true); // 007 - Order Management
         // GetAll
         IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null); // 005 - Shopping Cart
         // Add
