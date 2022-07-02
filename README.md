@@ -266,3 +266,7 @@
 - Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> CoverTypeController.cs -> // 008 - Advance Concepts
 - Edit -> Nutz.Web -> Areas -> Admin -> Controllers -> ProductController.cs -> // 008 - Advance Concepts
 - Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*008 - Advance Concepts*@
+
+- Nuget -> MailKit -> Install
+- Nuget -> MimeKit -> Install
+- Edit -> Nutz.Utility -> EmailSender.cs -> // 008 - Advance Concepts
