@@ -270,3 +270,5 @@
 - Nuget -> MailKit -> Install
 - Nuget -> MimeKit -> Install
 - Edit -> Nutz.Utility -> EmailSender.cs -> // 008 - Advance Concepts
+
+- Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 008 - Advance Concepts
