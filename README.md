@@ -277,3 +277,7 @@
 - Edit -> Nutz.Utility -> EmailSender.cs -> // 008 - Advance Concepts
 - Nuget -> SendGrid -> Install
 
+- Edit -> Nutz.Web -> Program.cs -> // 008 - Advance Concepts
+- Edit -> Nutz.Utility -> SD.cs -> // 008 - Advance Concepts
+- Edit -> Nutz.Web -> Controllers -> HomeController.cs -> // 008 - Advance Concepts
+- Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*008 - Advance Concepts*@
