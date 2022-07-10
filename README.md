@@ -281,3 +281,8 @@
 - Edit -> Nutz.Utility -> SD.cs -> // 008 - Advance Concepts
 - Edit -> Nutz.Web -> Controllers -> HomeController.cs -> // 008 - Advance Concepts
 - Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*008 - Advance Concepts*@
+- Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 008 - Advance Concepts
+
+- Edit -> Nutz.Web -> ViewComponents -> ShoppingCartViewComponent.cs -> // 008 - Advance Concepts
+- Edit -> Nutz.Web -> Views -> Shared -> Components -> ShoppingCart -> Default.cshtml -> @*008 - Advance Concepts*@
+- Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*008 - Advance Concepts*@
