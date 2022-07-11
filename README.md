@@ -286,3 +286,7 @@
 - Edit -> Nutz.Web -> ViewComponents -> ShoppingCartViewComponent.cs -> // 008 - Advance Concepts
 - Edit -> Nutz.Web -> Views -> Shared -> Components -> ShoppingCart -> Default.cshtml -> @*008 - Advance Concepts*@
 - Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*008 - Advance Concepts*@
+
+- Nuget -> Microsoft.AspNetCore.Authentication.Facebook -> Install
+- https://developers.facebook.com/
+- Edit -> Nutz.Web -> Program.cs -> // 008 - Advance Concepts
