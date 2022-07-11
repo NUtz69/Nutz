@@ -290,3 +290,5 @@
 - Nuget -> Microsoft.AspNetCore.Authentication.Facebook -> Install
 - https://developers.facebook.com/
 - Edit -> Nutz.Web -> Program.cs -> // 008 - Advance Concepts
+- Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Account -> ExternalLogin.cshtml -> @*008 - Advance Concepts*@
+- Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Account -> ExternalLogin.cshtml.cs -> // 008 - Advance Concepts
