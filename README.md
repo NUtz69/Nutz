@@ -292,3 +292,13 @@
 - Edit -> Nutz.Web -> Program.cs -> // 008 - Advance Concepts
 - Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Account -> ExternalLogin.cshtml -> @*008 - Advance Concepts*@
 - Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Account -> ExternalLogin.cshtml.cs -> // 008 - Advance Concepts
+
+- Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Account -> Register.cshtml -> @*008 - Advance Concepts*@
+- Edit -> Nutz.Web -> Views -> Shared -> _Layout.cshtml -> @*008 - Advance Concepts*@
+- Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Account -> Register.cshtml.cs -> // 008 - Advance Concepts
+
+- Edit -> Nutz.Web -> Areas -> Customer -> Controllers -> CartController.cs -> // 008 - Advance Concepts
+
+@ Seed Database and Azure Deployment
+
+> 009 - Azure
