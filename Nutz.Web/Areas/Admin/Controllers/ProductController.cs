@@ -1,15 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Nutz.DataAccess;
 using Nutz.DataAccess.Repository;
 using Nutz.DataAccess.Repository.IRepository;
 using Nutz.Models;
 using Nutz.Models.ViewModels;
+using Nutz.Utility;
 
 namespace Nutz.Web.Controllers
 {
     // 002 - Product Management
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)] //008 - Advance Concepts
     public class ProductController : Controller
     {
         // Var

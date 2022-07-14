@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Nutz.DataAccess;
 using Nutz.DataAccess.Repository.IRepository;
 using Nutz.Models;
+using Nutz.Utility;
 
 namespace Nutz.Web.Controllers
 {
     // 001 - Repository Pattern
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)] //008 - Advance Concepts
     public class CategoryController : Controller
     {
         // Var

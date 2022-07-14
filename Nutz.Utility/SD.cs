@@ -26,5 +26,12 @@ namespace Nutz.Utility
         public const string PaymentStatusApproved = "Approved";
         public const string PaymentStatusDelayedPayment = "ApprovedForDelayedPayment";
         public const string PaymentStatusRejected = "Rejected";
+
+        // 008 - Advance Concepts
+        // Session
+        public const string SessionCart = "SessionShoppingCart";
+        // MailKit
+        public const string LogIn = "christophe.denutte@gmail.com";
+        public const string Pass = "fterfukhlqcqquuz";
     }
 }
