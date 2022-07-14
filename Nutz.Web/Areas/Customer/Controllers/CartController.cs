@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Nutz.DataAccess.Repository.IRepository;
 using Nutz.Models;
@@ -16,14 +17,18 @@ namespace Nutz.Web.Areas.Customer.Controllers
     {
         // Var
         private readonly IUnitOfWork _unitOfWork;
+        // 008 - Advance Concepts
+        private readonly IEmailSender _emailSender;
+
         [BindProperty] // Post the form
         public ShoppingCartVM ShoppingCartVM { get; set; }
         public int OrderTotal { get; set; }
 
         // ctor
-        public CartController(IUnitOfWork unitOfWork)
+        public CartController(IUnitOfWork unitOfWork, IEmailSender emailSender)
         {
             _unitOfWork = unitOfWork;
+            _emailSender = emailSender;
         }
 
         // Index
@@ -188,7 +193,7 @@ namespace Nutz.Web.Areas.Customer.Controllers
         // OrderConfirmation
         public IActionResult OrderConfirmation(int id)
         {
-            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == id);
+            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == id, includeProperties: "ApplicationUser");
             // 007 - Order Management
             if (orderHeader.PaymentStatus != SD.PaymentStatusDelayedPayment)
             {
@@ -202,6 +207,9 @@ namespace Nutz.Web.Areas.Customer.Controllers
                     _unitOfWork.Save();
                 }
             }
+            // 008 - Advance Concepts
+            _emailSender.SendEmailAsync(orderHeader.ApplicationUser.Email, "New Order - Nutz Trees", "<p>New Order Created !</p>");
+            HttpContext.Session.Clear();
 
             // Remove
             List<ShoppingCart> shoppingCarts = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == orderHeader.ApplicationUserId).ToList();
@@ -228,6 +236,10 @@ namespace Nutz.Web.Areas.Customer.Controllers
             if (cart.Count <= 1)
             {
                 _unitOfWork.ShoppingCart.Remove(cart);
+
+                // 008 - Advance Concepts
+                var count = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == cart.ApplicationUserId).ToList().Count - 1;
+                HttpContext.Session.SetInt32(SD.SessionCart, count);
             }
             else
             {
@@ -245,6 +257,11 @@ namespace Nutz.Web.Areas.Customer.Controllers
             var cart = _unitOfWork.ShoppingCart.GetFirstOrDefault(u => u.Id == cartId);
             _unitOfWork.ShoppingCart.Remove(cart);
             _unitOfWork.Save();
+
+            // 008 - Advance Concepts
+            var count = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == cart.ApplicationUserId).ToList().Count;
+            HttpContext.Session.SetInt32(SD.SessionCart, count);
+
             return RedirectToAction(nameof(Index));
         }
 

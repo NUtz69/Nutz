@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@*008 - Advance Concepts - Session*@
+@using Microsoft.AspNetCore.Http
+@using Nutz.Utility
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -31,27 +36,51 @@
                     @*Home*@
                     <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Home <span class="visually-hidden">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown">
-                    @*dropdown*@
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Managment</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a> @*Category*@                        
-                        <a class="dropdown-item" asp-area="Admin" asp-controller="CoverType" asp-action="Index">Cover Type</a> @*CoverType*@
-                        @*002 - Product Management*@                        
-                        <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a> @*Product*@
-                        @*004 - Identity Management*@
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a> @*Company*@
-                    </div>
-                </li>
+
+                @*008 - Advance Concepts*@
+                @if (User.IsInRole(SD.Role_Admin))
+                {
+                    <li class="nav-item dropdown">
+                        @*dropdown*@
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Managment</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a> @*Category*@                        
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="CoverType" asp-action="Index">Cover Type</a> @*CoverType*@
+                            @*002 - Product Management*@                        
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a> @*Product*@
+                            @*004 - Identity Management*@
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a> @*Company*@
+                            @*008 - Advance Concepts*@
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Create User</a> @*User*@
+                        </div>
+                    </li>
+                }
+
                 @*007 - Order Management*@
                 <li class="nav-item">
                     <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Manage Order</a>
                 </li>
-                @*005 - Shopping Cart*@
+
+                @*008 - Advance Concepts*@
+@*                @if (HttpContextAccessor.HttpContext.Session.GetInt32(SD.SessionCart) != null)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link active" asp-area="Customer" asp-controller="Cart" asp-action="Index"><i class="bi bi-cart"></i> (@HttpContextAccessor.HttpContext.Session.GetInt32(SD.SessionCart))</a>
+                    </li>                }
+                else*@
+@*                {
+                    @*005 - Shopping Cart
+                    <li class="nav-item">
+                        <a class="nav-link active" asp-area="Customer" asp-controller="Cart" asp-action="Index"></a>
+                    </li>                            
+                }*@
+
                 <li class="nav-item">
-                    <a class="nav-link active" asp-area="Customer" asp-controller="Cart" asp-action="Index"><i class="bi bi-cart"></i></a>
-                </li>
+                    <a class="nav-link active" asp-area="Customer" asp-controller="Cart" asp-action="Index">@await Component.InvokeAsync("ShoppingCart")</a>
+                </li> 
+
               </ul>
 
               @*004 - Identity Management*@

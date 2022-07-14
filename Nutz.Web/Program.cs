@@ -31,12 +31,28 @@ builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
+// 008 - Facebook
+builder.Services.AddAuthentication().AddFacebook(options =>
+{
+    options.AppId = "712293706844005";
+    options.AppSecret = "17821f51b7ab0df4cac5c1a185b1345c";
+});
+
 // 005 - Shopping Cart
 builder.Services.ConfigureApplicationCookie(options => 
 {
     options.LoginPath = $"/Identity/Account/Login";
     options.LogoutPath = $"/Identity/Account/Logout";
     options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+});
+
+// 008 - Advance Concepts
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(100);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 });
 
 var app = builder.Build();
@@ -59,6 +75,9 @@ StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey"
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+// 008 - Advance Concepts
+app.UseSession();
 
 // 004 - Identity Management
 app.MapRazorPages();

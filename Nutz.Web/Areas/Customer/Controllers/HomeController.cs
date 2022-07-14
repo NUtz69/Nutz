@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Nutz.DataAccess.Repository.IRepository;
 using Nutz.Models;
+using Nutz.Utility;
 using System.Diagnostics;
 using System.Security.Claims;
 
@@ -60,13 +61,15 @@ namespace Nutz.Web.Controllers
             if (cartFromDb == null)
             {
                 _unitOfWork.ShoppingCart.Add(shoppingCart);
+                _unitOfWork.Save();
+                // 008 - Advance Concepts
+                HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == claim.Value).ToList().Count); // Session
             }
             else
             {
                 _unitOfWork.ShoppingCart.IncrementCount(cartFromDb, shoppingCart.Count);
-            }
-
-            _unitOfWork.Save();
+                _unitOfWork.Save();
+            }            
 
             return RedirectToAction(nameof(Index));
         }
