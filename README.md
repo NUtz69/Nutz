@@ -302,3 +302,9 @@
 @ Seed Database and Azure Deployment
 
 > 009 - Azure
+
+- Edit -> Nutz.Web -> Areas -> Identity -> Pages -> Account -> Register.cshtml.cs -> // 009 - Azure
+- Edit -> Nutz.Web -> appsettings.json -> // 009 - Azure
+- Console -> Nutz.DataAccess -> Update-Database
+- Edit -> Nutz.DataAccess -> DbInitializer -> Interface -> IDbInitializer.cs -> // 009 - Azure
+- Edit -> Nutz.DataAccess -> DbInitializer -> Class -> DbInitializer.cs -> // 009 - Azure
