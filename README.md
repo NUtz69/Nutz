@@ -308,3 +308,4 @@
 - Console -> Nutz.DataAccess -> Update-Database
 - Edit -> Nutz.DataAccess -> DbInitializer -> Interface -> IDbInitializer.cs -> // 009 - Azure
 - Edit -> Nutz.DataAccess -> DbInitializer -> Class -> DbInitializer.cs -> // 009 - Azure
+- Edit -> Nutz.Web -> Program.cs -> // 009 - Azure
