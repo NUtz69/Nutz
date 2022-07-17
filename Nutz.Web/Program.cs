@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Nutz.Utility;
 using Stripe;
+using Nutz.DataAccess.DbInitializer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,9 @@ builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Str
 
 // 001 - Repository Pattern
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+// 009 - Azure
+builder.Services.AddScoped<IDbInitializer, DbInitializer>();
+
 // 004 - Identity Management
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
@@ -73,6 +77,9 @@ app.UseRouting();
 // 006 - Order
 StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 
+// 009 - Azure
+SeedDatabase();
+
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -88,3 +95,13 @@ app.MapControllerRoute(
     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+// 009 - Azure
+void SeedDatabase()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+        dbInitializer.Initialize();
+    }
+}
